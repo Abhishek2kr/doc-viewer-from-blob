@@ -1,0 +1,10 @@
+<h1>Hello {{docxFiles.length}}</h1>
+<!-- <div *ngFor="let file of docxFiles">
+  <h3>{{ file.name }}</h3>
+  <ngx-doc-viewer [url]="file.url" viewer="office" style="width:100%; height:600px;"></ngx-doc-viewer>
+</div> -->
+
+<div *ngFor="let file of docxFiles">
+  <h3>{{ file.name }}</h3>
+  <div [innerHTML]="file.content" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 20px;"></div>
+</div>
